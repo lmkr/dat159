@@ -7,16 +7,19 @@ void setup()
 }
 
 int active = 0;
-int changed = 0;
+int pushhandled = 0;
 byte brightness = 0;
+byte debug = 0;
 
 void loop()
 {
   int btn = digitalRead(12);
 
-  if ((btn == HIGH) && (!changed)) {
-    changed = 1;
+  if ((btn == HIGH) && (!pushhandled)) {
+    
+    pushhandled = 1;
     active = 1 - active;
+    
     if (active)
       digitalWrite(13, HIGH);
     else {
@@ -26,21 +29,15 @@ void loop()
   }
 
   if (btn == LOW)
-    changed = 0;
+    pushhandled = 0;
 
   int potval = analogRead(A0);
   int photoval = analogRead(A1);
-
-  Serial.print(photoval);
-  Serial.print("<");
-  Serial.print(potval);
-  Serial.print(":");
 
   if ((photoval < potval) && active) {
 
     brightness = min(potval - photoval, 255);
     analogWrite(9, brightness);
-    Serial.print(brightness);
 
   } else {
 
@@ -49,7 +46,23 @@ void loop()
 
   }
 
-  Serial.println();
+  // debugging control via serial
+  if (Serial.available() > 0) {
+
+     byte input = Serial.read();
+     debug = (input == 49);
+     
+  }
+
+  // debugging output via serial
+  if (debug) {
+    Serial.print(photoval);
+    Serial.print("<");
+    Serial.print(potval);
+    Serial.print(":");
+    Serial.print(brightness);
+    Serial.println();
+  }
 
 }
 
