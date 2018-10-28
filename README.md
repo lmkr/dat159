@@ -1,2 +1,3 @@
 # dat159
-Public code for the DAT159 HVL course
+
+Code and examples for the DAT159 HVL course
