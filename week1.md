@@ -14,6 +14,7 @@ For approvement of the assignment you will have to either show the working solut
 
 - Arduino language reference https://www.arduino.cc/reference/en
 - Arduino board layout https://www.arduino.cc/en/Reference/Board   
+- Short demovideo of the input/output example from the lectures https://www.youtube.com/watch?v=1kW8clGpUJQ
 - Code from the input/output example presented at the lectures https://github.com/lmkr/dat159/blob/master/iotdevices/arduino/lecture1/InputOutput/InputOutput.ino
 - TinkerCAD design for the input/output example presented at the lectures https://www.tinkercad.com/embed/ki35AdXHyJz?editbtn=1
 
