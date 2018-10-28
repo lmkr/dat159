@@ -2,14 +2,13 @@
 
 #### Access control device
 
-The hands-on is to be solved using TinkerCAD: https://www.tinkercad.com/  
+The hands-on is to be solved using TinkerCAD: https://www.tinkercad.com/  You will have to create an account. 
 
-You will have to create an account. If you have an Arduino board yourself, then you may also build the actual physical device.
+If you have an Arduino board yourself, then you may also build the actual physical device.
 
-Start the assignment by drawing a [finite state machine](https://en.wikipedia.org/wiki/Finite-state_machine) that shows the states of the device and how the devide may change its state.
+Start the assignment by drawing a [finite state machine](https://en.wikipedia.org/wiki/Finite-state_machine) that shows the states of the device, and the transition that may take place causing the device to change its state.
 
-For approvement of the assignment you will have to either show the working solution to one of the lecturers - or hand-in a link to your TinkerCAD design on Canvas.
-
+For approvement of the assignment you will have to either show the working solution to one of the lecturers (Lars or Tosin) - or hand-in a link to your TinkerCAD design on Canvas.
 
 ##### Resources
 
@@ -38,7 +37,8 @@ You will be using the following actuators with digital output
 
 ##### Functional requirements
 
-- The red LED is on when the system is in a LOCKED state.
+- The red LED is on when the system is in a LOCKED state. Initially, the system is locked.
+
 - When motion is detected, the yellow LED will be on; and the system is WAITING for:
 
    - The user is to do two pushes on the buttons. After each push the yellow LED should blink shortly.
@@ -49,4 +49,4 @@ You will be using the following actuators with digital output
 
 After a certain amount of time in the UNLOCKED state, the system should automatically enter the LOCKED state.
 
-**Extra:** if the user has not pushed two buttons within a certain amount of time, then system should go to the LOCKED state.
+**Extra:** if the user has not pushed two buttons within a certain amount of time in the WAITING state, then system should go to the LOCKED state.
