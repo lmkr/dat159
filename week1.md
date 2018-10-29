@@ -2,11 +2,9 @@
 
 #### Access control device
 
-The hands-on is to be solved using TinkerCAD: https://www.tinkercad.com/  You will have to create an account. 
+The hands-on is to be solved using the TinkerCAD: https://www.tinkercad.com/ simulator. Start by creating an account if you do not already have one. If you have an Arduino board yourself, then you may also build the actual physical prototype.
 
-If you have an Arduino board yourself, then you may also build the actual physical device.
-
-Start the assignment by drawing a [finite state machine](https://en.wikipedia.org/wiki/Finite-state_machine) that shows the states of the device, and the transition that may take place causing the device to change its state.
+Start the assignment by drawing a [finite state machine](https://en.wikipedia.org/wiki/Finite-state_machine) that shows the states of the system, and the transition that may take place causing the system to change its state. The description of the behaviour of the system is provided below.
 
 For approvement of the assignment you will have to either show the working solution to one of the lecturers (Lars or Tosin) - or hand-in a link to your TinkerCAD design on Canvas.
 
@@ -42,11 +40,11 @@ You will be using the following actuators with digital output
 
 - When motion is detected, the yellow LED will be on; and the system is WAITING for:
 
-   - The user is to do two pushes on the buttons. After each push the yellow LED should blink shortly.
+   - The user to do two pushes on the buttons. After each push, the yellow LED should blink shortly.
 
-   - If the order it correct, then system will become UNLOCKED, and green LED is on.
+   - If the order it correct, then system will become UNLOCKED, and the green LED is on.
 
-   - If the order it not correct, then system will go back to a LOCKED state
+   - If the order it not correct, the red LED should blink and the system will go back to a LOCKED state
 
 After a certain amount of time in the UNLOCKED state, the system should automatically enter the LOCKED state.
 
