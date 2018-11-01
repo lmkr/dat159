@@ -7,7 +7,7 @@ You will implement a heating device (actuator), temperature sensor (sensing), an
 
 We will use CloudMQTT as the cloud Broker for subscribing to and publishing to a topic. To use the CloudMQTT, you will need to register for a free account (see step 1 below).
 
-You will receive a sample code that publishes temperature sensor values to the temp topic on the CloudMQTT and also a sample code that subscribes to the temp topic on the CloudMQTT.
+You will receive a sample code that publishes temperature sensor values to the temp topic on the CloudMQTT and also a sample code that subscribes to the temp topic on the CloudMQTT. Please download sample code from mqtt-cloud folder.
 
 You will then need to implement:
 1.	A remote controller that publishes heater device ‘state’ (on/off) to the CloudMQTT ‘Heat’ topic based on the temperature of the room (subscribed to the topic ‘Temp’).
