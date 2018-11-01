@@ -19,20 +19,20 @@ To get started follow the 2 steps below:
 Step 1: Subscribe to CloudMQTT (Broker/Server)
 -	go to: https://www.cloudmqtt.com
 -	Create a free account on CloudMQTT (Cute Cat)
-o	If you have a github or google account you can use it
-o	This is our Broker (Server)
+  If you have a github or google account you can use it
 
 Step 2: Implement MQTT clients
 -	We are going to use Eclipse Paho client as client publisher and subscriber
-o	The simplest way is to:
-o	Create a maven project in Eclipse IDE
-o	Include the dependency (paho.client.mqttv3) in your pom.xml file (copy it from the site below)
-	https://mvnrepository.com/artifact/org.eclipse.paho/org.eclipse.paho.client.mqttv3/1.2.0
-o	Copy the sample code (MQTTPubTemperature.java and MQTTSubTemperature.java)
-o	Change the connection parameters to your CloudMQTT parameters (Click Details on your CloudMQTT)
-	broker: <tcp://your-cloudmqtt-instance:port>
-	username: <username-from-cloudmqtt>
-	password: <password-from-cloudmqtt>
-o	Test that you can connect to CloudMQTT and publish/subscribe to the ‘Temp’ topic.
+  - The simplest way is to:
+  - Create a maven project in Eclipse IDE
+  - Include the dependency (paho.client.mqttv3) in your pom.xml file (copy it from the site below) https://mvnrepository.com/artifact/org.eclipse.paho/org.eclipse.paho.client.mqttv3/1.2.0
+  - Copy the sample code (MQTTPubTemperature.java and MQTTSubTemperature.java)
+  - Change the connection parameters to your CloudMQTT parameters (Click Details on your CloudMQTT)
+  - broker: <tcp://your-cloudmqtt-instance:port>
+  - username: <username-from-cloudmqtt>
+  - password: <password-from-cloudmqtt>
+  - Test that you can connect to CloudMQTT and publish/subscribe to the ‘Temp’ topic.
 
 Step 3: Complete your task!!!
+
+For approval of the assignment you will have to show a working solution within 5 mins during the lectures on Monday (11.11.18) and Tuesday (12.11.18)
