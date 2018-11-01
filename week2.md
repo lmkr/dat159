@@ -7,25 +7,27 @@ You will implement a heating device (actuator), temperature sensor (sensing), an
 
 We will use CloudMQTT as the cloud Broker for subscribing to and publishing to a topic. To use the CloudMQTT, you will need to register for a free account (see step 1 below).
 
-You will receive a sample code that publishes temperature sensor values to the temp topic on the CloudMQTT and also a sample code that subscribes to the temp topic on the CloudMQTT. Please download sample code from mqtt-cloud folder.
+You will receive a sample code that publishes temperature sensor values to the temp topic on the CloudMQTT and also a sample code that subscribes to the temp topic on the CloudMQTT.
 
 You will then need to implement:
 1.	A remote controller that publishes heater device ‘state’ (on/off) to the CloudMQTT ‘Heat’ topic based on the temperature of the room (subscribed to the topic ‘Temp’).
 2.	Heater device action (on/off) based on the signal received from the controller (subscribed to the topic ‘Heat’).
 3.	A logic in the Temperature sensor to reasonably simulate switching between below normal temperature, normal temperature and above normal temperature over some time intervals.
 
-To get started follow steps 1 and 2 below:
+To get started follow the 2 steps below:
 
 Step 1: Subscribe to CloudMQTT (Broker/Server)
 -	go to: https://www.cloudmqtt.com
 -	Create a free account on CloudMQTT (Cute Cat)
 o	If you have a github or google account you can use it
 o	This is our Broker (Server)
+
 Step 2: Implement MQTT clients
 -	We are going to use Eclipse Paho client as client publisher and subscriber
 o	The simplest way is to:
 o	Create a maven project in Eclipse IDE
-o	Include the dependency (paho.client.mqttv3) in your pom.xml file (copy it from the site below) https://mvnrepository.com/artifact/org.eclipse.paho/org.eclipse.paho.client.mqttv3/1.2.0
+o	Include the dependency (paho.client.mqttv3) in your pom.xml file (copy it from the site below)
+	https://mvnrepository.com/artifact/org.eclipse.paho/org.eclipse.paho.client.mqttv3/1.2.0
 o	Copy the sample code (MQTTPubTemperature.java and MQTTSubTemperature.java)
 o	Change the connection parameters to your CloudMQTT parameters (Click Details on your CloudMQTT)
 	broker: <tcp://your-cloudmqtt-instance:port>
@@ -34,5 +36,3 @@ o	Change the connection parameters to your CloudMQTT parameters (Click Details o
 o	Test that you can connect to CloudMQTT and publish/subscribe to the ‘Temp’ topic.
 
 Step 3: Complete your task!!!
-
-For approval of the assignment you will have to show a working solution within 5 mins during the lectures on Monday (11.11.18) and Tuesday (12.11.18)
