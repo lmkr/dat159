@@ -1,5 +1,6 @@
 ### Week 2: Simulating a room heater device, temperature sensor, and heater controller with MQTT protocol & cloud services - hands-on assignment
 
+![alt tag](https://github.com/lmkr/dat159/blob/master/assets/lab2-fig1.png)
 
 ##### Task description
 You will implement a heating device (actuator), temperature sensor (sensing), and heater controller to simulate remote controlling of room heating device using MQTT protocol and cloud services (see Fig.1). The heat device is turned on to heat the room upon receiving state signal subscribed to and published by the controller. The temperature sensor senses the temperature in the room and publishes the temperature value to the cloud at certain time interval. The controller subscribes to the temperature and uses a rule logic to decide the state of the heater device (On or Off). The heater device is turned off when the room is too hot, and it is turned on when the room is too cold. You will decide the baseline (normal) temperature value (e.g. 25oC).
