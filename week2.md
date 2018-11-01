@@ -16,7 +16,7 @@ You will then need to implement:
 
 To get started follow the 2 steps below:
 
-Step 1: Subscribe to CloudMQTT (Broker/Server)
+Step 1: Register on CloudMQTT (Broker/Server)
 -	go to: https://www.cloudmqtt.com
 -	Create a free account on CloudMQTT (Cute Cat)
   If you have a github or google account you can use it
