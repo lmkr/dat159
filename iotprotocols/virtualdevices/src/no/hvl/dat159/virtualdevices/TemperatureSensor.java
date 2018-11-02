@@ -6,9 +6,9 @@ public class TemperatureSensor {
 	
 	public int readTemp () {
 		
-		long seconds = System.currentTimeMillis() / 1000;
+		long seconds = System.currentTimeMillis();
 		
-		double temp = RANGE * Math.sin(seconds);
+		double temp = RANGE * Math.sin(seconds / 1000);
 		
 		return (int) Math.ceil(temp);
 	}
