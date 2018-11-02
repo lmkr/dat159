@@ -22,10 +22,10 @@ public class MQTTSubTemperature implements MqttCallback{
 	public MQTTSubTemperature() throws MqttException {
 		String topic    = "Temp";
         int qos         = 1;		//1 - This client will acknowledge to the Device Gateway that messages are received
-        String broker   = "tcp://m23.cloudmqtt.com:14331";
-        String clientId = "MQTT_Temperature_SUB";
-        String username = "bstsnwbg";
-        String password = "r9KiZDnb0_cF";
+        String broker   = "";
+        String clientId = "";
+        String username = "";
+        String password = "";
     	
         MqttConnectOptions connOpts = new MqttConnectOptions();
         connOpts.setCleanSession(true);

@@ -16,14 +16,14 @@ import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 public class MQTTPubTemperature {
 	
 	private String topic = "Temp";
-    private int qos = 1;
-    private String broker = "tcp://m23.cloudmqtt.com:14331";
-    private String clientId = "MQTT_Temperature";
-    private String username = "bstsnwbg";
-    private String password = "r9KiZDnb0_cF";
+    	private int qos = 1;
+    	private String broker = "";
+    	private String clientId = "";
+    	private String username = "";
+    	private String password = "";
     
-    private MqttClient publisherClient;
-    private Random rand;
+    	private MqttClient publisherClient;
+    	private Random rand;
     
 	public MQTTPubTemperature() {
 		
