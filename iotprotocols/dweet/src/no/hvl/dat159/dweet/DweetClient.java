@@ -69,7 +69,38 @@ public class DweetClient {
 		return (response.has("this") && response.get("this").getAsString().equals("succeeded"));
 	}
 
+	public String get() throws IOException {
+		
+		// http://dweet.io/get/latest/dweet/for/dat159-sensor
+			
+		JsonObject json = new JsonObject();		
+		JsonElement content = json;
+		
+		thingName = URLEncoder.encode(thingName, "UTF-8");
+		
+		URL url = new URL("http" + "://" + API_DWEET_END_POINT + "/get/latest/dweet/for/" + thingName);
+				
+		HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+		
+		connection.setRequestProperty("Content-Type", "application/json; charset=utf-8");
+		connection.setRequestProperty("Accept", "application/json");
+		connection.setRequestMethod("GET");
+		connection.setDoInput(true);
+		connection.setDoOutput(true);
+		
+		JsonObject response = readResponse(connection.getInputStream());
 
+		connection.disconnect();
+
+		if (response.has("this") && response.get("this").getAsString().equals("succeeded"))
+		{
+			return response.toString();
+		}
+		else {
+			return null;
+		}
+	}
+	
 	private JsonObject readResponse(InputStream in) {
 		Scanner scan = new Scanner(in);
 		StringBuilder sn = new StringBuilder();
