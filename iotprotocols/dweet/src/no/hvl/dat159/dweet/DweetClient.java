@@ -18,32 +18,19 @@ public class DweetClient {
 	private String API_DWEET_END_POINT = "dweet.io";
 
 	private JsonParser jsonParser = new JsonParser();
-
 	private String thingName = "dat159-sensor";
-
 	
+
 	public DweetClient() {
-		
-		/*
-		Tweet tweet = message.getBody(Tweet.class);
-		JsonObject json = new JsonObject();
-		json.addProperty("User", tweet.getAuthor());
-		json.addProperty("Message", tweet.getMessage());
-		
-		JsonObject json = new JsonObject();
-		json.addProperty("User", "test");
-		json.addProperty("Message", "test");
-		*/
-		
+				
 	}
 	
 	public boolean publish(int temperature) throws IOException {
 		
-		JsonObject json = new JsonObject();
-		json.addProperty("Temperature", temperature);
+		JsonObject content = new JsonObject();
 		
-		JsonElement content = json;
-		
+		content.addProperty("Temperature", temperature);
+				
 		thingName = URLEncoder.encode(thingName, "UTF-8");
 		
 		URL url = new URL("http" + "://" + API_DWEET_END_POINT + "/dweet/for/" + thingName);
@@ -72,10 +59,7 @@ public class DweetClient {
 	public String get() throws IOException {
 		
 		// http://dweet.io/get/latest/dweet/for/dat159-sensor
-			
-		JsonObject json = new JsonObject();		
-		JsonElement content = json;
-		
+					
 		thingName = URLEncoder.encode(thingName, "UTF-8");
 		
 		URL url = new URL("http" + "://" + API_DWEET_END_POINT + "/get/latest/dweet/for/" + thingName);
@@ -102,11 +86,15 @@ public class DweetClient {
 	}
 	
 	private JsonObject readResponse(InputStream in) {
+		
 		Scanner scan = new Scanner(in);
 		StringBuilder sn = new StringBuilder();
+		
 		while (scan.hasNext())
 			sn.append(scan.nextLine()).append('\n');
+		
 		scan.close();
+		
 		return jsonParser.parse(sn.toString()).getAsJsonObject();
 	}
 }

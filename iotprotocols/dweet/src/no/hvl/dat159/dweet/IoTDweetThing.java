@@ -17,16 +17,16 @@ public class IoTDweetThing {
 				System.out.print("!");
 				
 				if (client.publish(temp)) {
-					System.out.print("SUCCESS");
+					System.out.println(temp);
 				} else
-					System.out.print("FAIL");
+					System.out.println("FAIL");
 			
 				Thread.sleep(10000);
 
 			}
 
 		} catch (Exception ex) {
-			System.out.println("IoT DweetThing: " + ex.getMessage());
+			System.out.println("DweetThing: " + ex.getMessage());
 			ex.printStackTrace();
 		}
 

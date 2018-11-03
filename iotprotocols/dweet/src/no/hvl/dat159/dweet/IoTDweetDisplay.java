@@ -26,7 +26,7 @@ public class IoTDweetDisplay {
 			}
 
 		} catch (Exception ex) {
-			System.out.println("IoT DweetDisplay: " + ex.getMessage());
+			System.out.println("DweetDisplay: " + ex.getMessage());
 			ex.printStackTrace();
 		}
 
