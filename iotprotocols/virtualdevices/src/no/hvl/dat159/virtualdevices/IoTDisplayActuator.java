@@ -25,11 +25,11 @@ public class IoTDisplayActuator {
 				if (ok) {
 					display.write(Integer.toString(temp));
 				} else
-					display.write("Receive Error");
+					display.write("DisplayActuator: Receive error");
 
 			}
 		} catch (SocketException ex) {
-			System.out.println("IoT Display: " + ex.getMessage());
+			System.out.println("DisplayActuator: " + ex.getMessage());
 			ex.printStackTrace();
 
 		}

@@ -23,12 +23,15 @@ public class UDPSender {
         try {
         
         	DatagramPacket request = new DatagramPacket(message, message.length, address, port);
-        	System.out.println("!");
+        	
+        	System.out.print(".");
+        	
         	socket.send(request);
-			System.out.println(".");
+        	
+			System.out.println("!");
         
         } catch (IOException ex) {
-            System.out.println("Client send: " + ex.getMessage());
+            System.out.println("UDPSender: " + ex.getMessage());
             ex.printStackTrace();
             sent = false;
         }

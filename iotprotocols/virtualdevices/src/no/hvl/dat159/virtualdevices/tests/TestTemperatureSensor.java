@@ -14,7 +14,7 @@ class TestTemperatureSensor {
 		TemperatureSensor sensor = new TemperatureSensor();
 		
 		for (int i = 0; i<10; i++) {
-			System.out.println(sensor.readTemp());
+			System.out.println("TEMPERATURE SENSOR READ: " + sensor.readTemp());
 			Thread.sleep(1000);
 		}
 	

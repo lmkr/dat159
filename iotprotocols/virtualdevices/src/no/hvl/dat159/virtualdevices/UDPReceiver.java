@@ -16,11 +16,15 @@ public class UDPReceiver {
 		boolean received = true;
 		
 		DatagramPacket request = new DatagramPacket(message, message.length);
-		System.out.println("?");
-
+		
 		try {
+		
+			System.out.print("?");
+			
 			socket.receive(request);
-			System.out.println(".");
+			
+			System.out.print(".");
+			
 		} catch (IOException ex) {
 			received = false;
 		}
@@ -29,6 +33,7 @@ public class UDPReceiver {
 	}
 	
 	public void stop() {
+		
 		if (socket != null) {
 			socket.close();
 		}

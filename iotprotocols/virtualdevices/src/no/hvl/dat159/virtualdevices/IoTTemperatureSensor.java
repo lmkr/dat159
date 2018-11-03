@@ -16,14 +16,14 @@ public class IoTTemperatureSensor {
 			while (true) {
 
 				int temp = sensor.readTemp();
+				System.out.print("Sending "+ temp);
 
-				// TODO: convert
 				byte[] message = ByteBuffer.allocate(4).putInt(temp).array();
-
+				
 				boolean ok = sender.send(message);
 
 				if (!ok) {
-					System.out.println("Send Error");
+					System.out.println("TemperatureSensor : Send Error");
 				}
 
 				Thread.sleep(10000);
@@ -31,7 +31,7 @@ public class IoTTemperatureSensor {
 			}
 
 		} catch (Exception ex) {
-			System.out.println("IoT Temperature Sensor: " + ex.getMessage());
+			System.out.println("TemperatureSensor: " + ex.getMessage());
 			ex.printStackTrace();
 		}
 
