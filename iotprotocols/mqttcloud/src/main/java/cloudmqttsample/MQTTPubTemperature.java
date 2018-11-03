@@ -17,10 +17,10 @@ public class MQTTPubTemperature {
 
 	private String topic = "Temp";
 	private int qos = 1;
-	private String broker = "tcp://m23.cloudmqtt.com:14331";
+	private String broker = "tcp://your-cloudmqtt-instance:port”;
 	private String clientId = "MQTT_Temperature";
-	private String username = "bstsnwbg";
-	private String password = "r9KiZDnb0_cF";
+	private String username = ""; 
+	private String password = "";
 
 	private MqttClient publisherClient;
 	private Random rand;
