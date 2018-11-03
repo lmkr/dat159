@@ -4,7 +4,7 @@ public class TemperatureSensor {
 
 	static final int RANGE = 100;
 	
-	public int readTemp () {
+	public int read () {
 		
 		long seconds = System.currentTimeMillis();
 		

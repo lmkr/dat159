@@ -15,7 +15,7 @@ public class IoTTemperatureSensor {
 
 			while (true) {
 
-				int temp = sensor.readTemp();
+				int temp = sensor.read();
 				System.out.print("Sending "+ temp);
 
 				byte[] message = ByteBuffer.allocate(4).putInt(temp).array();
