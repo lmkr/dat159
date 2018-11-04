@@ -24,8 +24,8 @@
 #include <SPI.h>
 #include <WiFi.h>
 
-char ssid[] = "os21-1-netgear"; //  your network SSID (name)
-char pass[] = "cpnets89";    // your network password (use for WPA, or use as key for WEP)
+char ssid[] = "HUAWEI_TIT-L01_1270"; //  your network SSID (name)
+char pass[] = "7c3b407f";    // your network password (use for WPA, or use as key for WEP)
 int keyIndex = 0;            // your network key Index number (needed only for WEP)
 
 int status = WL_IDLE_STATUS;
