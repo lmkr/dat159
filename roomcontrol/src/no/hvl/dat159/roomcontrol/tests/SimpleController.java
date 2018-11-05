@@ -1,4 +1,6 @@
-package no.hvl.dat159.roomcontrol;
+package no.hvl.dat159.roomcontrol.tests;
+
+import no.hvl.dat159.roomcontrol.Heating;
 
 public class SimpleController implements Runnable {
 

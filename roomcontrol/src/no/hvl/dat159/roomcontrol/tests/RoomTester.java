@@ -1,4 +1,8 @@
-package no.hvl.dat159.roomcontrol;
+package no.hvl.dat159.roomcontrol.tests;
+
+import no.hvl.dat159.roomcontrol.Heating;
+import no.hvl.dat159.roomcontrol.Room;
+import no.hvl.dat159.roomcontrol.TemperatureSensor;
 
 public class RoomTester {
 
