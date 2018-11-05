@@ -14,6 +14,7 @@ public class RoomDevice {
 			
 			Thread temppublisher = new Thread(sensorpub);
 			
+			// TODO: add heating subscriber running in its own thread
 			temppublisher.start();
 			
 			temppublisher.join();
