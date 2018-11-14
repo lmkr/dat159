@@ -30,7 +30,7 @@ You will have to augment the API such that there are also methods for retrieving
 
 #### Task 2 - Implement the virtual IoT devices as clients
 
-The virtual IoT devices and the controller from week 2 will be client using the REST API from task 2. You can find some example code for performing HTTP requests in Java here: https://github.com/lmkr/dat159/blob/master/iotprotocols/dweet/src/no/hvl/dat159/dweet/DweetClient.java
+The virtual IoT devices and the controller from week 2 will be client using the REST API from task 1. You can find some example code for performing HTTP requests in Java here: https://github.com/lmkr/dat159/blob/master/iotprotocols/dweet/src/no/hvl/dat159/dweet/DweetClient.java
 
 You may also use the Postman tool to generate Java code.
 
